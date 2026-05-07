@@ -1,0 +1,11 @@
+services:
+  web-servidor:
+    image: php:8.0-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html
+  db-dados:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: senha_forte_aula
